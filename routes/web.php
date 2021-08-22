@@ -16,3 +16,8 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+$router->get('/api/weather', 'WeatherController@getWeatherFiltered');
+$router->get('/api/time', 'TimeController@getTime');
+
+
