@@ -6,9 +6,11 @@
     "type": "project",
     "require": {
         "php": "^7.3|^8.0",
+        "ext-json": "*",
+        "dg/rss-php": "^1.5",
         "guzzlehttp/guzzle": "^7.0",
-        "laravel/lumen-framework": "^8.0",
-      "ext-json": "*"
+        "johngrogg/ics-parser": "^3.0",
+        "laravel/lumen-framework": "^8.0"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",

@@ -14,10 +14,12 @@
 */
 
 $router->get('/', function () use ($router) {
-    return $router->app->version();
+    return "SmartClock API<br>" . $router->app->version();
 });
 
-$router->get('/api/weather', 'WeatherController@getWeatherFiltered');
+$router->get('/api/weather', 'WeatherSource@getWeatherFiltered');
 $router->get('/api/time', 'TimeController@getTime');
+$router->get('/api/init', 'SmartClockController@getInitSettings');
+$router->get('/api/get/{index}', 'SmartClockController@getDashboard');
 
 
